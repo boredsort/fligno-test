@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.9.0+ on linux)" generated="20210426 22:13:27.097" rpa="false" schemaversion="2">
+<suite id="s1" name="Test Book Create" source="/home/tesla/Documents/code/python/fligno-test/test/test_book_create.robot">
+<test id="s1-t1" name="Scenario: Adding a new Book Entry">
+<kw name="Open Main Page using Chrome Browser and Login" library="resources" type="SETUP">
+<kw name="Open Main Page using Chrome Browser" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${mainpage}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210426 22:13:27.447" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/library/'.</msg>
+<status status="PASS" starttime="20210426 22:13:27.446" endtime="20210426 22:13:30.282"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210426 22:13:30.282" endtime="20210426 22:13:30.391"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:27.446" endtime="20210426 22:13:30.392"/>
+</kw>
+<kw name="Click Login Link" library="navbar_links">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:30.394" endtime="20210426 22:13:30.474"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:30.475" level="INFO">Clicking element '//a[contains(text(),"Log In")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:30.474" endtime="20210426 22:13:30.678"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:30.392" endtime="20210426 22:13:30.678"/>
+</kw>
+<kw name="Input Username and Password" library="login">
+<arg>admin1500</arg>
+<arg>password1500</arg>
+<kw name="Input Username" library="login_page">
+<arg>${username}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:30.679" endtime="20210426 22:13:30.711"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:30.712" level="INFO">Typing text 'admin1500' into text field 'id_login'.</msg>
+<status status="PASS" starttime="20210426 22:13:30.712" endtime="20210426 22:13:30.814"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:30.679" endtime="20210426 22:13:30.814"/>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:30.815" endtime="20210426 22:13:30.844"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:30.844" endtime="20210426 22:13:30.865"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:30.814" endtime="20210426 22:13:30.865"/>
+</kw>
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:30.866" endtime="20210426 22:13:30.892"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:30.893" level="INFO">Typing text 'password1500' into text field 'id_password'.</msg>
+<status status="PASS" starttime="20210426 22:13:30.892" endtime="20210426 22:13:30.978"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:30.865" endtime="20210426 22:13:30.978"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:30.678" endtime="20210426 22:13:30.978"/>
+</kw>
+<kw name="Click Login Button" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:30.979" endtime="20210426 22:13:30.995"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:30.995" level="INFO">Clicking element '//button[contains(text(),"Log ")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:30.995" endtime="20210426 22:13:32.484"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:30.979" endtime="20210426 22:13:32.484"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:27.446" endtime="20210426 22:13:32.485"/>
+</kw>
+<kw name="When the User Fill out the form completely">
+<kw name="Name" library="FakerLibrary">
+<var>${INPUT.title}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20210426 22:13:32.489" level="INFO">${INPUT.title} = Barbara Byrd</msg>
+<status status="PASS" starttime="20210426 22:13:32.487" endtime="20210426 22:13:32.489"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.review}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:32.490" level="INFO">${INPUT.review} = Else fire total.</msg>
+<status status="PASS" starttime="20210426 22:13:32.489" endtime="20210426 22:13:32.490"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.summary}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:32.491" level="INFO">${INPUT.summary} = Language drop for time. Opportunity husband toward time into need off.</msg>
+<status status="PASS" starttime="20210426 22:13:32.490" endtime="20210426 22:13:32.491"/>
+</kw>
+<kw name="Random Digit Not Null Or Empty" library="FakerLibrary">
+<var>${INPUT.rating}</var>
+<doc>Generate a random non-zero digit (1 to 9) or an empty string.</doc>
+<msg timestamp="20210426 22:13:32.492" level="INFO">${INPUT.rating} = 9</msg>
+<status status="PASS" starttime="20210426 22:13:32.491" endtime="20210426 22:13:32.492"/>
+</kw>
+<kw name="Click book add button" library="library_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:32.493" endtime="20210426 22:13:32.524"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:32.524" level="INFO">Clicking button 'book-add'.</msg>
+<status status="PASS" starttime="20210426 22:13:32.524" endtime="20210426 22:13:32.632"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:32.492" endtime="20210426 22:13:32.632"/>
+</kw>
+<kw name="Input the whole form with" library="add_books">
+<arg>&amp;{INPUT}</arg>
+<kw name="Input Title" library="bookscreate_page">
+<arg>${input}[title]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:32.633" endtime="20210426 22:13:32.662"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:32.662" level="INFO">Typing text 'Barbara Byrd' into text field 'id_title'.</msg>
+<status status="PASS" starttime="20210426 22:13:32.662" endtime="20210426 22:13:32.733"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:32.633" endtime="20210426 22:13:32.733"/>
+</kw>
+<kw name=" Input Summary" library="bookscreate_page">
+<arg>${input}[summary]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:32.734" endtime="20210426 22:13:32.768"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<arg>${summary}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:32.768" level="INFO">Typing text 'Language drop for time. Opportunity husband toward time into need off.' into text field 'id_summary'.</msg>
+<status status="PASS" starttime="20210426 22:13:32.768" endtime="20210426 22:13:32.867"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:32.733" endtime="20210426 22:13:32.867"/>
+</kw>
+<kw name="Input Review" library="bookscreate_page">
+<arg>${input}[review]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:32.868" endtime="20210426 22:13:32.899"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<arg>${review}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:32.900" level="INFO">Typing text 'Else fire total.' into text field 'id_review'.</msg>
+<status status="PASS" starttime="20210426 22:13:32.899" endtime="20210426 22:13:32.970"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:32.867" endtime="20210426 22:13:32.970"/>
+</kw>
+<kw name="Input Rating" library="bookscreate_page">
+<arg>${input}[rating]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:32.971" endtime="20210426 22:13:32.994"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<arg>${rating}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:32.994" level="INFO">Typing text '9' into text field 'id_rating'.</msg>
+<status status="PASS" starttime="20210426 22:13:32.994" endtime="20210426 22:13:33.074"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:32.970" endtime="20210426 22:13:33.074"/>
+</kw>
+<kw name="Select a Category" library="bookscreate_page">
+<arg>2</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_category}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210426 22:13:33.075" level="INFO">Selecting options from selection list 'id_category' by value 2.</msg>
+<status status="PASS" starttime="20210426 22:13:33.075" endtime="20210426 22:13:33.125"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:33.075" endtime="20210426 22:13:33.125"/>
+</kw>
+<kw name="Select the condition" library="bookscreate_page">
+<arg>1</arg>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>condition</arg>
+<arg>${value}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20210426 22:13:33.126" level="INFO">Selecting '1' from radio button 'condition'.</msg>
+<status status="PASS" starttime="20210426 22:13:33.125" endtime="20210426 22:13:33.179"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:33.125" endtime="20210426 22:13:33.179"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:32.632" endtime="20210426 22:13:33.179"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:32.486" endtime="20210426 22:13:33.179"/>
+</kw>
+<kw name="And Click Submit Add Button" library="bookscreate_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:33.180" endtime="20210426 22:13:33.199"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:33.200" level="INFO">Clicking button 'btn_submit'.</msg>
+<status status="PASS" starttime="20210426 22:13:33.199" endtime="20210426 22:13:33.377"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:33.180" endtime="20210426 22:13:33.377"/>
+</kw>
+<kw name="Then Prompted with successfully added message" library="library_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${message}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:33.377" endtime="20210426 22:13:33.401"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${message}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:33.401" endtime="20210426 22:13:33.415"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${message}</arg>
+<arg>Successfully added</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20210426 22:13:33.431" level="INFO">Element 'notif-message' contains text 'Successfully added'.</msg>
+<status status="PASS" starttime="20210426 22:13:33.415" endtime="20210426 22:13:33.431"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:33.377" endtime="20210426 22:13:33.431"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 22:13:33.431" endtime="20210426 22:13:33.486"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:27.445" endtime="20210426 22:13:33.486"/>
+</test>
+<test id="s1-t2" name="Scenario: Adding a new Book with no Title">
+<kw name="Open Main Page using Chrome Browser and Login" library="resources" type="SETUP">
+<kw name="Open Main Page using Chrome Browser" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${mainpage}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210426 22:13:33.488" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/library/'.</msg>
+<status status="PASS" starttime="20210426 22:13:33.488" endtime="20210426 22:13:36.274"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210426 22:13:36.274" endtime="20210426 22:13:36.381"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:33.487" endtime="20210426 22:13:36.381"/>
+</kw>
+<kw name="Click Login Link" library="navbar_links">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:36.383" endtime="20210426 22:13:36.449"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:36.450" level="INFO">Clicking element '//a[contains(text(),"Log In")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:36.449" endtime="20210426 22:13:36.572"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:36.382" endtime="20210426 22:13:36.572"/>
+</kw>
+<kw name="Input Username and Password" library="login">
+<arg>admin1500</arg>
+<arg>password1500</arg>
+<kw name="Input Username" library="login_page">
+<arg>${username}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:36.573" endtime="20210426 22:13:36.593"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:36.593" level="INFO">Typing text 'admin1500' into text field 'id_login'.</msg>
+<status status="PASS" starttime="20210426 22:13:36.593" endtime="20210426 22:13:36.659"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:36.572" endtime="20210426 22:13:36.659"/>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:36.659" endtime="20210426 22:13:36.681"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:36.681" endtime="20210426 22:13:36.695"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:36.659" endtime="20210426 22:13:36.695"/>
+</kw>
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:36.695" endtime="20210426 22:13:36.715"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:36.715" level="INFO">Typing text 'password1500' into text field 'id_password'.</msg>
+<status status="PASS" starttime="20210426 22:13:36.715" endtime="20210426 22:13:36.780"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:36.695" endtime="20210426 22:13:36.780"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:36.572" endtime="20210426 22:13:36.780"/>
+</kw>
+<kw name="Click Login Button" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:36.781" endtime="20210426 22:13:36.795"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:36.795" level="INFO">Clicking element '//button[contains(text(),"Log ")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:36.795" endtime="20210426 22:13:38.156"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:36.781" endtime="20210426 22:13:38.156"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:33.487" endtime="20210426 22:13:38.156"/>
+</kw>
+<kw name="When the User Fill out the form without title">
+<kw name="the User Fill out the form completely">
+<kw name="Name" library="FakerLibrary">
+<var>${INPUT.title}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20210426 22:13:38.157" level="INFO">${INPUT.title} = Amanda Yoder</msg>
+<status status="PASS" starttime="20210426 22:13:38.157" endtime="20210426 22:13:38.157"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.review}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:38.158" level="INFO">${INPUT.review} = Short price manage high its then. Political inside mission they increase remember father time. Feeling room care vote reason.</msg>
+<status status="PASS" starttime="20210426 22:13:38.158" endtime="20210426 22:13:38.158"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.summary}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:38.158" level="INFO">${INPUT.summary} = Crime a ask low because. Find Republican feeling moment.</msg>
+<status status="PASS" starttime="20210426 22:13:38.158" endtime="20210426 22:13:38.158"/>
+</kw>
+<kw name="Random Digit Not Null Or Empty" library="FakerLibrary">
+<var>${INPUT.rating}</var>
+<doc>Generate a random non-zero digit (1 to 9) or an empty string.</doc>
+<msg timestamp="20210426 22:13:38.159" level="INFO">${INPUT.rating} = </msg>
+<status status="PASS" starttime="20210426 22:13:38.158" endtime="20210426 22:13:38.159"/>
+</kw>
+<kw name="Click book add button" library="library_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:38.159" endtime="20210426 22:13:38.181"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:38.181" level="INFO">Clicking button 'book-add'.</msg>
+<status status="PASS" starttime="20210426 22:13:38.181" endtime="20210426 22:13:38.264"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.159" endtime="20210426 22:13:38.264"/>
+</kw>
+<kw name="Input the whole form with" library="add_books">
+<arg>&amp;{INPUT}</arg>
+<kw name="Input Title" library="bookscreate_page">
+<arg>${input}[title]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:38.265" endtime="20210426 22:13:38.286"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:38.287" level="INFO">Typing text 'Amanda Yoder' into text field 'id_title'.</msg>
+<status status="PASS" starttime="20210426 22:13:38.287" endtime="20210426 22:13:38.354"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.264" endtime="20210426 22:13:38.354"/>
+</kw>
+<kw name=" Input Summary" library="bookscreate_page">
+<arg>${input}[summary]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:38.355" endtime="20210426 22:13:38.375"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<arg>${summary}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:38.376" level="INFO">Typing text 'Crime a ask low because. Find Republican feeling moment.' into text field 'id_summary'.</msg>
+<status status="PASS" starttime="20210426 22:13:38.375" endtime="20210426 22:13:38.454"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.354" endtime="20210426 22:13:38.454"/>
+</kw>
+<kw name="Input Review" library="bookscreate_page">
+<arg>${input}[review]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:38.455" endtime="20210426 22:13:38.477"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<arg>${review}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:38.477" level="INFO">Typing text 'Short price manage high its then. Political inside mission they increase remember father time. Feeling room care vote reason.' into text field 'id_review'.</msg>
+<status status="PASS" starttime="20210426 22:13:38.477" endtime="20210426 22:13:38.585"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.454" endtime="20210426 22:13:38.585"/>
+</kw>
+<kw name="Input Rating" library="bookscreate_page">
+<arg>${input}[rating]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:38.586" endtime="20210426 22:13:38.620"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<arg>${rating}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:38.620" level="INFO">Typing text '' into text field 'id_rating'.</msg>
+<status status="PASS" starttime="20210426 22:13:38.620" endtime="20210426 22:13:38.703"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.585" endtime="20210426 22:13:38.703"/>
+</kw>
+<kw name="Select a Category" library="bookscreate_page">
+<arg>2</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_category}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210426 22:13:38.704" level="INFO">Selecting options from selection list 'id_category' by value 2.</msg>
+<status status="PASS" starttime="20210426 22:13:38.703" endtime="20210426 22:13:38.764"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.703" endtime="20210426 22:13:38.765"/>
+</kw>
+<kw name="Select the condition" library="bookscreate_page">
+<arg>1</arg>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>condition</arg>
+<arg>${value}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20210426 22:13:38.765" level="INFO">Selecting '1' from radio button 'condition'.</msg>
+<status status="PASS" starttime="20210426 22:13:38.765" endtime="20210426 22:13:38.828"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.765" endtime="20210426 22:13:38.828"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.264" endtime="20210426 22:13:38.828"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.157" endtime="20210426 22:13:38.828"/>
+</kw>
+<kw name="Clear Title" library="bookscreate_page">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210426 22:13:38.828" endtime="20210426 22:13:38.856"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.828" endtime="20210426 22:13:38.856"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.156" endtime="20210426 22:13:38.857"/>
+</kw>
+<kw name="And Click Submit Add Button" library="bookscreate_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:38.857" endtime="20210426 22:13:38.875"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:38.875" level="INFO">Clicking button 'btn_submit'.</msg>
+<status status="PASS" starttime="20210426 22:13:38.875" endtime="20210426 22:13:38.926"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.857" endtime="20210426 22:13:38.926"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 22:13:38.927" endtime="20210426 22:13:38.981"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:33.487" endtime="20210426 22:13:38.981"/>
+</test>
+<test id="s1-t3" name="Scenario: Adding a new Book with no Summary">
+<kw name="Open Main Page using Chrome Browser and Login" library="resources" type="SETUP">
+<kw name="Open Main Page using Chrome Browser" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${mainpage}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210426 22:13:38.983" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/library/'.</msg>
+<status status="PASS" starttime="20210426 22:13:38.983" endtime="20210426 22:13:41.886"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210426 22:13:41.887" endtime="20210426 22:13:41.994"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.983" endtime="20210426 22:13:41.995"/>
+</kw>
+<kw name="Click Login Link" library="navbar_links">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:41.996" endtime="20210426 22:13:42.034"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:42.034" level="INFO">Clicking element '//a[contains(text(),"Log In")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:42.034" endtime="20210426 22:13:42.132"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:41.995" endtime="20210426 22:13:42.132"/>
+</kw>
+<kw name="Input Username and Password" library="login">
+<arg>admin1500</arg>
+<arg>password1500</arg>
+<kw name="Input Username" library="login_page">
+<arg>${username}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:42.133" endtime="20210426 22:13:42.154"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:42.155" level="INFO">Typing text 'admin1500' into text field 'id_login'.</msg>
+<status status="PASS" starttime="20210426 22:13:42.155" endtime="20210426 22:13:42.222"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:42.133" endtime="20210426 22:13:42.222"/>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:42.222" endtime="20210426 22:13:42.244"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:42.244" endtime="20210426 22:13:42.260"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:42.222" endtime="20210426 22:13:42.260"/>
+</kw>
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:42.261" endtime="20210426 22:13:42.281"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:42.281" level="INFO">Typing text 'password1500' into text field 'id_password'.</msg>
+<status status="PASS" starttime="20210426 22:13:42.281" endtime="20210426 22:13:42.347"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:42.260" endtime="20210426 22:13:42.347"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:42.133" endtime="20210426 22:13:42.347"/>
+</kw>
+<kw name="Click Login Button" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:42.348" endtime="20210426 22:13:42.362"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:42.363" level="INFO">Clicking element '//button[contains(text(),"Log ")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:42.363" endtime="20210426 22:13:43.982"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:42.347" endtime="20210426 22:13:43.983"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.982" endtime="20210426 22:13:43.983"/>
+</kw>
+<kw name="When the User Fill out the form without summary">
+<kw name="the User Fill out the form completely">
+<kw name="Name" library="FakerLibrary">
+<var>${INPUT.title}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20210426 22:13:43.987" level="INFO">${INPUT.title} = Daniel Webb</msg>
+<status status="PASS" starttime="20210426 22:13:43.986" endtime="20210426 22:13:43.987"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.review}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:43.989" level="INFO">${INPUT.review} = Run yet attack card wall deep investment. Record financial collection school before though. Morning force magazine. Source federal already energy rich part response.</msg>
+<status status="PASS" starttime="20210426 22:13:43.988" endtime="20210426 22:13:43.989"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.summary}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:43.990" level="INFO">${INPUT.summary} = Arrive wish ago tonight physical. Either see foot hard. Across customer outside blue discuss then.</msg>
+<status status="PASS" starttime="20210426 22:13:43.989" endtime="20210426 22:13:43.990"/>
+</kw>
+<kw name="Random Digit Not Null Or Empty" library="FakerLibrary">
+<var>${INPUT.rating}</var>
+<doc>Generate a random non-zero digit (1 to 9) or an empty string.</doc>
+<msg timestamp="20210426 22:13:43.990" level="INFO">${INPUT.rating} = </msg>
+<status status="PASS" starttime="20210426 22:13:43.990" endtime="20210426 22:13:43.990"/>
+</kw>
+<kw name="Click book add button" library="library_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:43.991" endtime="20210426 22:13:44.025"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:44.025" level="INFO">Clicking button 'book-add'.</msg>
+<status status="PASS" starttime="20210426 22:13:44.025" endtime="20210426 22:13:44.159"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:43.990" endtime="20210426 22:13:44.160"/>
+</kw>
+<kw name="Input the whole form with" library="add_books">
+<arg>&amp;{INPUT}</arg>
+<kw name="Input Title" library="bookscreate_page">
+<arg>${input}[title]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:44.160" endtime="20210426 22:13:44.182"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:44.182" level="INFO">Typing text 'Daniel Webb' into text field 'id_title'.</msg>
+<status status="PASS" starttime="20210426 22:13:44.182" endtime="20210426 22:13:44.250"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.160" endtime="20210426 22:13:44.250"/>
+</kw>
+<kw name=" Input Summary" library="bookscreate_page">
+<arg>${input}[summary]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:44.250" endtime="20210426 22:13:44.270"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<arg>${summary}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:44.270" level="INFO">Typing text 'Arrive wish ago tonight physical. Either see foot hard. Across customer outside blue discuss then.' into text field 'id_summary'.</msg>
+<status status="PASS" starttime="20210426 22:13:44.270" endtime="20210426 22:13:44.366"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.250" endtime="20210426 22:13:44.366"/>
+</kw>
+<kw name="Input Review" library="bookscreate_page">
+<arg>${input}[review]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:44.367" endtime="20210426 22:13:44.387"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<arg>${review}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:44.387" level="INFO">Typing text 'Run yet attack card wall deep investment. Record financial collection school before though. Morning force magazine. Source federal already energy rich part response.' into text field 'id_review'.</msg>
+<status status="PASS" starttime="20210426 22:13:44.387" endtime="20210426 22:13:44.507"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.366" endtime="20210426 22:13:44.508"/>
+</kw>
+<kw name="Input Rating" library="bookscreate_page">
+<arg>${input}[rating]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:44.508" endtime="20210426 22:13:44.532"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<arg>${rating}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:44.532" level="INFO">Typing text '' into text field 'id_rating'.</msg>
+<status status="PASS" starttime="20210426 22:13:44.532" endtime="20210426 22:13:44.586"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.508" endtime="20210426 22:13:44.586"/>
+</kw>
+<kw name="Select a Category" library="bookscreate_page">
+<arg>2</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_category}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210426 22:13:44.587" level="INFO">Selecting options from selection list 'id_category' by value 2.</msg>
+<status status="PASS" starttime="20210426 22:13:44.587" endtime="20210426 22:13:44.635"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.587" endtime="20210426 22:13:44.635"/>
+</kw>
+<kw name="Select the condition" library="bookscreate_page">
+<arg>1</arg>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>condition</arg>
+<arg>${value}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20210426 22:13:44.636" level="INFO">Selecting '1' from radio button 'condition'.</msg>
+<status status="PASS" starttime="20210426 22:13:44.635" endtime="20210426 22:13:44.683"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.635" endtime="20210426 22:13:44.683"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.160" endtime="20210426 22:13:44.683"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:43.985" endtime="20210426 22:13:44.684"/>
+</kw>
+<kw name="Clear Summary" library="bookscreate_page">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210426 22:13:44.684" endtime="20210426 22:13:44.710"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.684" endtime="20210426 22:13:44.710"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:43.984" endtime="20210426 22:13:44.710"/>
+</kw>
+<kw name="And Click Submit Add Button" library="bookscreate_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:44.710" endtime="20210426 22:13:44.731"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:44.731" level="INFO">Clicking button 'btn_submit'.</msg>
+<status status="PASS" starttime="20210426 22:13:44.731" endtime="20210426 22:13:44.779"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.710" endtime="20210426 22:13:44.779"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 22:13:44.779" endtime="20210426 22:13:44.836"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:38.982" endtime="20210426 22:13:44.836"/>
+</test>
+<test id="s1-t4" name="Scenario: Adding a new Book with no Review">
+<kw name="Open Main Page using Chrome Browser and Login" library="resources" type="SETUP">
+<kw name="Open Main Page using Chrome Browser" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${mainpage}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210426 22:13:44.838" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/library/'.</msg>
+<status status="PASS" starttime="20210426 22:13:44.838" endtime="20210426 22:13:47.659"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210426 22:13:47.660" endtime="20210426 22:13:47.775"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.837" endtime="20210426 22:13:47.776"/>
+</kw>
+<kw name="Click Login Link" library="navbar_links">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:47.778" endtime="20210426 22:13:47.855"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:47.857" level="INFO">Clicking element '//a[contains(text(),"Log In")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:47.856" endtime="20210426 22:13:48.002"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:47.777" endtime="20210426 22:13:48.002"/>
+</kw>
+<kw name="Input Username and Password" library="login">
+<arg>admin1500</arg>
+<arg>password1500</arg>
+<kw name="Input Username" library="login_page">
+<arg>${username}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:48.003" endtime="20210426 22:13:48.025"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:48.026" level="INFO">Typing text 'admin1500' into text field 'id_login'.</msg>
+<status status="PASS" starttime="20210426 22:13:48.026" endtime="20210426 22:13:48.100"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:48.003" endtime="20210426 22:13:48.101"/>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:48.101" endtime="20210426 22:13:48.121"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:48.121" endtime="20210426 22:13:48.134"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:48.101" endtime="20210426 22:13:48.134"/>
+</kw>
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:48.135" endtime="20210426 22:13:48.155"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:48.155" level="INFO">Typing text 'password1500' into text field 'id_password'.</msg>
+<status status="PASS" starttime="20210426 22:13:48.155" endtime="20210426 22:13:48.219"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:48.135" endtime="20210426 22:13:48.219"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:48.002" endtime="20210426 22:13:48.219"/>
+</kw>
+<kw name="Click Login Button" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:48.220" endtime="20210426 22:13:48.235"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:48.235" level="INFO">Clicking element '//button[contains(text(),"Log ")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:48.235" endtime="20210426 22:13:49.648"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:48.219" endtime="20210426 22:13:49.648"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.837" endtime="20210426 22:13:49.649"/>
+</kw>
+<kw name="When the User Fill out the form without Review">
+<kw name="the User Fill out the form completely">
+<kw name="Name" library="FakerLibrary">
+<var>${INPUT.title}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20210426 22:13:49.651" level="INFO">${INPUT.title} = Dylan Henson</msg>
+<status status="PASS" starttime="20210426 22:13:49.650" endtime="20210426 22:13:49.651"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.review}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:49.652" level="INFO">${INPUT.review} = Mission quickly Republican trip. Claim source information mouth walk.</msg>
+<status status="PASS" starttime="20210426 22:13:49.652" endtime="20210426 22:13:49.652"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.summary}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:49.653" level="INFO">${INPUT.summary} = Term cause age. According fund safe address wall class. With task his increase teach. Break blood form stock wide staff ball.</msg>
+<status status="PASS" starttime="20210426 22:13:49.653" endtime="20210426 22:13:49.653"/>
+</kw>
+<kw name="Random Digit Not Null Or Empty" library="FakerLibrary">
+<var>${INPUT.rating}</var>
+<doc>Generate a random non-zero digit (1 to 9) or an empty string.</doc>
+<msg timestamp="20210426 22:13:49.654" level="INFO">${INPUT.rating} = </msg>
+<status status="PASS" starttime="20210426 22:13:49.653" endtime="20210426 22:13:49.654"/>
+</kw>
+<kw name="Click book add button" library="library_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:49.654" endtime="20210426 22:13:49.681"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:49.681" level="INFO">Clicking button 'book-add'.</msg>
+<status status="PASS" starttime="20210426 22:13:49.681" endtime="20210426 22:13:49.773"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:49.654" endtime="20210426 22:13:49.773"/>
+</kw>
+<kw name="Input the whole form with" library="add_books">
+<arg>&amp;{INPUT}</arg>
+<kw name="Input Title" library="bookscreate_page">
+<arg>${input}[title]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:49.774" endtime="20210426 22:13:49.803"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:49.803" level="INFO">Typing text 'Dylan Henson' into text field 'id_title'.</msg>
+<status status="PASS" starttime="20210426 22:13:49.803" endtime="20210426 22:13:49.875"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:49.774" endtime="20210426 22:13:49.876"/>
+</kw>
+<kw name=" Input Summary" library="bookscreate_page">
+<arg>${input}[summary]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:49.876" endtime="20210426 22:13:49.897"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<arg>${summary}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:49.897" level="INFO">Typing text 'Term cause age. According fund safe address wall class. With task his increase teach. Break blood form stock wide staff ball.' into text field 'id_summary'.</msg>
+<status status="PASS" starttime="20210426 22:13:49.897" endtime="20210426 22:13:50.006"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:49.876" endtime="20210426 22:13:50.006"/>
+</kw>
+<kw name="Input Review" library="bookscreate_page">
+<arg>${input}[review]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:50.007" endtime="20210426 22:13:50.027"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<arg>${review}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:50.028" level="INFO">Typing text 'Mission quickly Republican trip. Claim source information mouth walk.' into text field 'id_review'.</msg>
+<status status="PASS" starttime="20210426 22:13:50.027" endtime="20210426 22:13:50.111"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:50.006" endtime="20210426 22:13:50.111"/>
+</kw>
+<kw name="Input Rating" library="bookscreate_page">
+<arg>${input}[rating]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:50.112" endtime="20210426 22:13:50.131"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<arg>${rating}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:50.131" level="INFO">Typing text '' into text field 'id_rating'.</msg>
+<status status="PASS" starttime="20210426 22:13:50.131" endtime="20210426 22:13:50.187"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:50.111" endtime="20210426 22:13:50.188"/>
+</kw>
+<kw name="Select a Category" library="bookscreate_page">
+<arg>2</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_category}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210426 22:13:50.188" level="INFO">Selecting options from selection list 'id_category' by value 2.</msg>
+<status status="PASS" starttime="20210426 22:13:50.188" endtime="20210426 22:13:50.240"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:50.188" endtime="20210426 22:13:50.240"/>
+</kw>
+<kw name="Select the condition" library="bookscreate_page">
+<arg>1</arg>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>condition</arg>
+<arg>${value}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20210426 22:13:50.241" level="INFO">Selecting '1' from radio button 'condition'.</msg>
+<status status="PASS" starttime="20210426 22:13:50.241" endtime="20210426 22:13:50.288"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:50.240" endtime="20210426 22:13:50.288"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:49.773" endtime="20210426 22:13:50.288"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:49.650" endtime="20210426 22:13:50.288"/>
+</kw>
+<kw name="Clear Review" library="bookscreate_page">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210426 22:13:50.288" endtime="20210426 22:13:50.308"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:50.288" endtime="20210426 22:13:50.308"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:49.649" endtime="20210426 22:13:50.308"/>
+</kw>
+<kw name="And Click Submit Add Button" library="bookscreate_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:50.309" endtime="20210426 22:13:50.334"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:50.335" level="INFO">Clicking button 'btn_submit'.</msg>
+<status status="PASS" starttime="20210426 22:13:50.334" endtime="20210426 22:13:50.383"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:50.308" endtime="20210426 22:13:50.383"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 22:13:50.383" endtime="20210426 22:13:50.438"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:44.836" endtime="20210426 22:13:50.439"/>
+</test>
+<test id="s1-t5" name="Scenario: Adding a new Book with rating as a String">
+<kw name="Open Main Page using Chrome Browser and Login" library="resources" type="SETUP">
+<kw name="Open Main Page using Chrome Browser" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${mainpage}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210426 22:13:50.440" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8000/library/'.</msg>
+<status status="PASS" starttime="20210426 22:13:50.440" endtime="20210426 22:13:53.359"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210426 22:13:53.359" endtime="20210426 22:13:53.467"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:50.440" endtime="20210426 22:13:53.467"/>
+</kw>
+<kw name="Click Login Link" library="navbar_links">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:53.468" endtime="20210426 22:13:53.511"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LINK_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:53.512" level="INFO">Clicking element '//a[contains(text(),"Log In")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:53.511" endtime="20210426 22:13:53.656"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:53.467" endtime="20210426 22:13:53.656"/>
+</kw>
+<kw name="Input Username and Password" library="login">
+<arg>admin1500</arg>
+<arg>password1500</arg>
+<kw name="Input Username" library="login_page">
+<arg>${username}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:53.657" endtime="20210426 22:13:53.677"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:53.678" level="INFO">Typing text 'admin1500' into text field 'id_login'.</msg>
+<status status="PASS" starttime="20210426 22:13:53.678" endtime="20210426 22:13:53.744"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:53.656" endtime="20210426 22:13:53.744"/>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:53.744" endtime="20210426 22:13:53.765"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:53.765" endtime="20210426 22:13:53.781"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:53.744" endtime="20210426 22:13:53.781"/>
+</kw>
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210426 22:13:53.781" endtime="20210426 22:13:53.802"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:53.803" level="INFO">Typing text 'password1500' into text field 'id_password'.</msg>
+<status status="PASS" starttime="20210426 22:13:53.802" endtime="20210426 22:13:53.870"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:53.781" endtime="20210426 22:13:53.870"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:53.656" endtime="20210426 22:13:53.870"/>
+</kw>
+<kw name="Click Login Button" library="login_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:53.871" endtime="20210426 22:13:53.886"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:53.886" level="INFO">Clicking element '//button[contains(text(),"Log ")]'.</msg>
+<status status="PASS" starttime="20210426 22:13:53.886" endtime="20210426 22:13:55.515"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:53.870" endtime="20210426 22:13:55.516"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:50.440" endtime="20210426 22:13:55.516"/>
+</kw>
+<kw name="the User Fill out the form with rating as a String">
+<kw name="the User Fill out the form completely">
+<kw name="Name" library="FakerLibrary">
+<var>${INPUT.title}</var>
+<doc>:example 'John Doe'</doc>
+<msg timestamp="20210426 22:13:55.520" level="INFO">${INPUT.title} = Eduardo Clark</msg>
+<status status="PASS" starttime="20210426 22:13:55.518" endtime="20210426 22:13:55.520"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.review}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:55.521" level="INFO">${INPUT.review} = Analysis statement notice society nice mention serious. Sound chair wait then along.</msg>
+<status status="PASS" starttime="20210426 22:13:55.520" endtime="20210426 22:13:55.521"/>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<var>${INPUT.summary}</var>
+<doc>Generate a paragraph.</doc>
+<msg timestamp="20210426 22:13:55.522" level="INFO">${INPUT.summary} = Month positive decade message ten citizen money. Improve water keep drug produce hundred. Process program green remember painting trial dinner.</msg>
+<status status="PASS" starttime="20210426 22:13:55.521" endtime="20210426 22:13:55.522"/>
+</kw>
+<kw name="Random Digit Not Null Or Empty" library="FakerLibrary">
+<var>${INPUT.rating}</var>
+<doc>Generate a random non-zero digit (1 to 9) or an empty string.</doc>
+<msg timestamp="20210426 22:13:55.523" level="INFO">${INPUT.rating} = </msg>
+<status status="PASS" starttime="20210426 22:13:55.522" endtime="20210426 22:13:55.523"/>
+</kw>
+<kw name="Click book add button" library="library_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:55.524" endtime="20210426 22:13:55.563"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${add_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:55.564" level="INFO">Clicking button 'book-add'.</msg>
+<status status="PASS" starttime="20210426 22:13:55.564" endtime="20210426 22:13:55.704"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:55.523" endtime="20210426 22:13:55.704"/>
+</kw>
+<kw name="Input the whole form with" library="add_books">
+<arg>&amp;{INPUT}</arg>
+<kw name="Input Title" library="bookscreate_page">
+<arg>${input}[title]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:55.705" endtime="20210426 22:13:55.727"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_title}</arg>
+<arg>${title}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:55.727" level="INFO">Typing text 'Eduardo Clark' into text field 'id_title'.</msg>
+<status status="PASS" starttime="20210426 22:13:55.727" endtime="20210426 22:13:55.852"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:55.705" endtime="20210426 22:13:55.852"/>
+</kw>
+<kw name=" Input Summary" library="bookscreate_page">
+<arg>${input}[summary]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:55.852" endtime="20210426 22:13:55.872"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_summary}</arg>
+<arg>${summary}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:55.873" level="INFO">Typing text 'Month positive decade message ten citizen money. Improve water keep drug produce hundred. Process program green remember painting trial dinner.' into text field 'id_summary'.</msg>
+<status status="PASS" starttime="20210426 22:13:55.873" endtime="20210426 22:13:56.002"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:55.852" endtime="20210426 22:13:56.002"/>
+</kw>
+<kw name="Input Review" library="bookscreate_page">
+<arg>${input}[review]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:56.002" endtime="20210426 22:13:56.044"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_review}</arg>
+<arg>${review}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:56.045" level="INFO">Typing text 'Analysis statement notice society nice mention serious. Sound chair wait then along.' into text field 'id_review'.</msg>
+<status status="PASS" starttime="20210426 22:13:56.045" endtime="20210426 22:13:56.140"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:56.002" endtime="20210426 22:13:56.140"/>
+</kw>
+<kw name="Input Rating" library="bookscreate_page">
+<arg>${input}[rating]</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:56.140" endtime="20210426 22:13:56.159"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<arg>${rating}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:56.159" level="INFO">Typing text '' into text field 'id_rating'.</msg>
+<status status="PASS" starttime="20210426 22:13:56.159" endtime="20210426 22:13:56.221"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:56.140" endtime="20210426 22:13:56.221"/>
+</kw>
+<kw name="Select a Category" library="bookscreate_page">
+<arg>2</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_category}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210426 22:13:56.222" level="INFO">Selecting options from selection list 'id_category' by value 2.</msg>
+<status status="PASS" starttime="20210426 22:13:56.222" endtime="20210426 22:13:56.278"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:56.221" endtime="20210426 22:13:56.278"/>
+</kw>
+<kw name="Select the condition" library="bookscreate_page">
+<arg>1</arg>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>condition</arg>
+<arg>${value}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20210426 22:13:56.279" level="INFO">Selecting '1' from radio button 'condition'.</msg>
+<status status="PASS" starttime="20210426 22:13:56.279" endtime="20210426 22:13:56.331"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:56.279" endtime="20210426 22:13:56.331"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:55.704" endtime="20210426 22:13:56.332"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:55.517" endtime="20210426 22:13:56.332"/>
+</kw>
+<kw name="Input Rating" library="bookscreate_page">
+<arg>FakerLibrary.Word</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:56.332" endtime="20210426 22:13:56.345"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_rating}</arg>
+<arg>${rating}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:56.345" level="INFO">Typing text 'FakerLibrary.Word' into text field 'id_rating'.</msg>
+<status status="PASS" starttime="20210426 22:13:56.345" endtime="20210426 22:13:56.402"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:56.332" endtime="20210426 22:13:56.402"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:55.517" endtime="20210426 22:13:56.403"/>
+</kw>
+<kw name="And Click Submit Add Button" library="bookscreate_page">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210426 22:13:56.403" endtime="20210426 22:13:56.423"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_add_submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210426 22:13:56.423" level="INFO">Clicking button 'btn_submit'.</msg>
+<status status="PASS" starttime="20210426 22:13:56.423" endtime="20210426 22:13:56.473"/>
+</kw>
+<status status="PASS" starttime="20210426 22:13:56.403" endtime="20210426 22:13:56.473"/>
+</kw>
+<kw name="Select random Category" library="bookscreate_page">
+<kw name="Random Choices" library="FakerLibrary">
+<var>${sel}</var>
+<arg>@{category_options}</arg>
+<doc>Generate a list of objects randomly sampled from ``elements`` with replacement.</doc>
+<msg timestamp="20210426 22:13:56.474" level="INFO">${sel} = ['o', '/', 'e', 'o', 'n', 'i', 's', '/', 'l', 'o', 'l']</msg>
+<status status="PASS" starttime="20210426 22:13:56.473" endtime="20210426 22:13:56.474"/>
+</kw>
+<kw name="Select a Category" library="bookscreate_page">
+<arg>${sel}</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_category}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210426 22:13:56.474" level="INFO">Selecting options from selection list 'id_category' by value ['o', '/', 'e', 'o', 'n', 'i', 's', '/', 'l', 'o', 'l'].</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210426 22:13:56.690" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210426 22:13:56.504" endtime="20210426 22:13:56.690"/>
+</kw>
+<msg timestamp="20210426 22:13:56.691" level="FAIL">NoSuchElementException: Message: Cannot locate option with value: ['o', '/', 'e', 'o', 'n', 'i', 's', '/', 'l', 'o', 'l']
+</msg>
+<status status="FAIL" starttime="20210426 22:13:56.474" endtime="20210426 22:13:56.691"/>
+</kw>
+<status status="FAIL" starttime="20210426 22:13:56.474" endtime="20210426 22:13:56.691"/>
+</kw>
+<status status="FAIL" starttime="20210426 22:13:56.473" endtime="20210426 22:13:56.691"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 22:13:56.692" endtime="20210426 22:13:56.752"/>
+</kw>
+<status status="FAIL" starttime="20210426 22:13:50.439" endtime="20210426 22:13:56.752">NoSuchElementException: Message: Cannot locate option with value: ['o', '/', 'e', 'o', 'n', 'i', 's', '/', 'l', 'o', 'l']
+</status>
+</test>
+<doc>Testing the book create</doc>
+<status status="FAIL" starttime="20210426 22:13:27.098" endtime="20210426 22:13:56.753"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="1" skip="0" id="s1" name="Test Book Create">Test Book Create</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
