@@ -33,7 +33,7 @@ Scenario: Editing with no title
     Given The Book table has Entries
     Then Clicked Edit Button
     and Clear Title
-    Title tooltip
+   # Title tooltip
     # Click Submit Update Button
     # should this find a tooltip message here to test if something is blank
 
@@ -64,6 +64,6 @@ Fill out the form completely
     ${INPUT.title} =        FakerLibrary.Name
     ${INPUT.review} =       FakerLibrary.Paragraph
     ${INPUT.summary} =      FakerLibrary.Paragraph
-    ${INPUT.rating} =       FakerLibrary.Random Digit Not Null Or Empty    
+    ${INPUT.rating} =       FakerLibrary.Random Digit
     And Input the whole form with  &{INPUT}
     

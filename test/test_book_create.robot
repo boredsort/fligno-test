@@ -16,7 +16,6 @@ Test Teardown     Close Browser
 &{INPUT}            title=''  summary=''   review=''   rating='' condition='' category=''
 
 *** Test Cases ***
-
 Scenario: Adding a new Book Entry
     When the User Fill out the form completely
     And Click Submit Add Button
@@ -73,12 +72,3 @@ the User Fill out the form with rating as a String
     the User Fill out the form completely  
     Input Rating    FakerLibrary.Word  
     
-Randomise Category Selection
-    ${cat}        Select random Category
-    Select From List By Value    id
-
-#Select random Category
-#    &{valuelist}=      Get Category Values
-#    ${randomvalue}=    Random Element    &{valuelist}
-#    [Return]        ${randomvalue}
-

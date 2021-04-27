@@ -94,6 +94,10 @@ Title tooltip
     Mouse Over                        ${field_title}    
     Wait Until Element Is Visible    ${toolt}  
 
-Select random Category
-    ${sel}=     Random Choices    @{category_options}
-    Select a Category    ${sel}
+#Select random Category
+ #   ${sel}=     Random Choices    @{category_options}
+  #  Select a Category    ${sel}
+
+Get Category Count
+    ${count}    Get Element Count    ${category_options}
+    [Return]    ${count}
